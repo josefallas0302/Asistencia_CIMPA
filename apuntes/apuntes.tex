@@ -1,0 +1,455 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Ejercicio 1        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{equation}
+2xy + 6x + \left(x^2-4 \right) y' \\
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \left( x^2 -4 \right) y' &=& -2xy-6x\\
+\nonumber \left( x^2-4 \right)y' &=& -2x\left( y+3 \right)\\   
+\nonumber \frac{y'}{y+3}  &=& \frac{-2x}{x^2-4} \\
+\nonumber \frac{dy}{dx} \cdot \frac{1}{y+3} &=&  \frac{-2x}{x^2-4} \\
+\nonumber \frac{dy}{y+3}  &=& \frac{-2x}{x^2-4} dx
+\end{eqnarray}
+\\
+\begin{eqnarray}
+\nonumber  \int \frac{dy}{y+3}  &=& \int \frac{-2x}{x^2-4} dx
+\end{eqnarray}
+
+\begin{align*}
+U &= y + 3	&	 &w = x^2-4 \\
+du &= dy 	 &	 &dw = 2xdx
+\end{align*}
+
+\begin{eqnarray}
+\nonumber \int \frac{du}{U} &=& \int \frac{dw}{w} \\
+\nonumber ln \lvert u \rvert &=& -ln \lvert w \rvert +C \\
+\nonumber ln \lvert y+3 \rvert &=& -ln \lvert x^2-4 \rvert +C \\
+\nonumber e^{ln\lvert y+3 \rvert} &=& e^{ln\lvert x^2-4 \rvert ^-1} \cdot e^c \\
+\nonumber y+3 &=& \frac{A}{x^2-4}  \ \ \ \ \     , A = \pm e^c \\
+\nonumber y+3 &=& \frac{A}{x^2 -4} \rightarrow Solucion General
+\end{eqnarray}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Ejercicio 2        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+sen\left( x \right) dx + ydy = 0, \ \ \ \ \ con \ \  y \left(0 \right) = 0 \\
+\end{equation}
+
+\begin{eqnarray}
+\nonumber -sen\left( x \right) dx &=& ydy \leftarrow separamos variables \\
+\nonumber - \int sen\left( x \right) dx &=& \int ydy \leftarrow integramos \\
+\nonumber cos \left( x \right) &=& \frac{y^2}{2} + c \ \ , \ \ \ \ \ c constante arbitraria \\
+\nonumber y^2 &=& 2cos \left( x \right) + 2c \ \ \ \ \ \ \ A = 2C \\
+\nonumber y &=&  \sqrt[•]{2cos \left( x \right) + A} \\
+\nonumber Con y \left( 0 \right) = 1 \\
+\nonumber  \Rightarrow 1 &=& \sqrt{2cos \left( x \right) + A} \Rightarrow 1^2 = \left( \sqrt{2cos \left( x \right) + A}\right)^2 \\
+\nonumber 1 &=& 2 + A \Rightarrow A =-1 \\
+\nonumber \Rightarrow  y &=& \sqrt{2cos\left(x \right) -1}
+\end{eqnarray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Ejercicio 3        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+\frac{dy}{dx} = xe^{x^2 -ln\left( y^2 \right)}
+\end{equation} 
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} &=& xe^{x^2} \cdot e^{ln\left( y^2 \right)} \\
+\nonumber \frac{dy}{dx} &=& xe^{x^2} \cdot \frac{1}{y^2} \\
+\nonumber y^2dy &=& xe^{x^2}dx \\
+\nonumber \int y^2dy &=& \int xe^{x^2}dx \\
+\nonumber & & u = x^2 \ \ \ \ \  du = 2xdx\\
+\nonumber \frac{y^3}{3} &=& \frac{1}{2} \int e^u du \\
+\nonumber \frac{y^3}{3} &=& \frac{1}{2}e^u + c \\
+\nonumber \frac{y^3}{3} &=& \frac{1}{2}e^{x^2} +c \\
+\nonumber &\underbrace{y^3 = \frac{3}{2} e^{x^2} + A}_{Sol. General}& , \ \ \ \ \ A = 3c
+\end{eqnarray} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Ejercicio 4        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+x \frac{dy}{dx} = 2 \left(y-4 \right) \ \ \ \ \ \ \ (Ver la Familia de Soluciones)
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{2\left(2t-4 \right)} &=& \frac{dx}{x}  \\
+\nonumber u = y-4 \ \ \ \ du = dy  & & \\
+\nonumber \frac{1}{2} \int \frac{du}{u} &=& ln \lvert x \rvert + A\\
+\nonumber \frac{1}{2} ln \lvert u \rvert &=& ln \lvert x \rvert + A \\
+\nonumber ln{\lvert y-4 \rvert }^{\frac{1}{2}} &=& ln \lvert x \rvert +A \\
+\nonumber e^{ln{\lvert y-4 \rvert }^{\frac{1}{2}}} &=& e^{ ln \lvert x \rvert + A } \\
+\nonumber {lvert y-4 \rvert}^{\frac{1}{2}}  &=& \lvert x \rvert \cdot e^A \\
+\nonumber \sqrt{y-4} &=& x \cdot B, \ \ \ \ \ B =  e^A  \\
+\nonumber {\sqrt{y-4}}^2 &=& Bx^2 \\
+\nonumber y-4 &=& Bx^2 \\ 
+\nonumber  & \underbrace{y = Bx^2 + 4}_{Solucion \ General} & \rbrace Solucion \ General \\
+\end{eqnarray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Ejercicio 5        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+\frac{dy}{dx} = \frac{x^2 y -4y}{x+2}
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} &=& \underbrace{y}_{H\left( y \right)} \underbrace{\frac{x^2 -4}{x+2}}_{G\left( x \right)} \\
+\nonumber \frac{dy}{y} &=& \frac{x^2 -4}{x+2} dx \\
+\nonumber \int \frac{dy}{y} &=& \int \left( x-2 \right)dx  \\
+\nonumber ln \lvert y \rvert &=& \frac{x^2}{2} - 2x + C \\
+\nonumber e^{ln \lvert y \rvert} &=& e^{\frac{x^2}{2} - 2x + C} \\
+\nonumber y &=& e^{\frac{x^2}{2} - 2x } \cdot A , \ \ \ \ A = e^C \\
+\end{eqnarray}
+
+\begin{equation}
+\frac{dy}{dx} = e^{x+y}
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} &=& e^x \cdot e^y \\
+\nonumber \frac{dy}{e^y} &=& e^x dx \\
+\nonumber \int \frac{dy}{e^y} &=& \int e^x dx \\
+\nonumber \int e^{-y} dy &=& \int e^x dx \\
+\nonumber u = -y \ \ \ du = -dy & & \\
+\nonumber - \int e^u du = e^x + A \\
+\nonumber -e^u = e^x + A \\
+\nonumber ln \left(e^{y^-1} \right) &=& ln \left( -e^x - A \right) \\
+\nonumber ln \left(e^{y} \right) &=& - ln \left( -e^x - A \right) \\
+\nonumber y &=& -ln \left( -e^x + A \right)  
+\end{eqnarray}
+
+Ejemplo 
+
+\begin{equation}
+\left( x^2 + 4 \right) dy  - xydx  = 0, \ \ \ \ \ \ \ Trabajo \  en \ clase
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \left( x^2 + 4 \right) dy  &=& xydx \\
+\nonumber \int \frac{dy}{y} &=& \frac{x}{x^2+4} dx, \ \ \ \  u = x^2 +4 \ \ du = 2xdx \\
+\nonumber ln \lvert y \rvert &=& \frac{1}{2} ln \lvert u \rvert + C \\
+\nonumber ln \lvert y \rvert &=& \frac{1}{2} ln \lvert x^2 + 4 \rvert  + C ,  \ \ \ e^C = B \\
+\nonumber y &=& \sqrt{x^2 + 4} \cdot B \rightarrow Solucion \ general, \ \  Solucion \  singular y\left( x \right) = 0 \\ 
+\end{eqnarray}
+\underline{Ejemplo}
+
+\begin{equation}
+\frac{dy}{dx} = 2y +1 
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{2y +1} = dx \leftarrow Separamos \ para \  2y +1 \neq 0 \\
+\nonumber \int \frac{dy}{2y+1} = \int dx \\ 
+\nonumber u = 2y+1 \ \ \ du =2dy & & \\
+\nonumber \frac{1}{2} \int \frac{du}{u} &=& x + C \\
+\nonumber ln \rvert u \lvert &=& 2x + 2C , \ \ \ \ B = 2C \\
+\nonumber e^{ln \rvert 2y +1 \lvert} &=& e^{\left( 2x + B \right)}, \ \ \ e^B = D \\
+\nonumber 2y + 1 &=& e^{2x} \cdot D \\
+\nonumber \Leftarrow y &=& \frac{De^{2x}-1}{2}
+\end{eqnarray}
+
+\underline{Ejerciocios} \ \ \ \ \  (Separables) \\
+
+Resuelva : 
+
+\begin{enumerate}
+\item $\frac{dy}{dx} = 2-y, \ \ \ y\left( 0 \right) = 0 $
+\item $\frac{dy}{dx} = \frac{\left( y-1 \right)^2 }{\left( x+1 \right)^2 } $
+\item $y' = x \sqrt{y} $
+\item $\frac{dy}{dx} = \frac{xsin(x)}{y}, \ \ \ y\left(0 \right) = -1 $
+\item $x \frac{dy}{dx} = y ln(x) $
+\item $sin(x)- \left( y cos^2(x) \right) \frac{dy}{dx} = 0 $
+\item Demuestre que $ y = \frac{cos(x)}{x}$ es la solución de la E.D $x \frac{dy}{dx} + y=-sin(x), \ x > 0,\  con \ y\left(\frac{\pi}{2} \right) = 0  $
+\end{enumerate}
+
+\subsection{E.D Homogéneas}
+
+\subsubsection{Def:}
+
+Una E.D normalizada $y' = F(x,y)$ es homogénea si puede escribirse como: \\
+
+\begin{equation}
+\nonumber y' = G \left( \frac{y}{x} \right)
+\end{equation}
+
+Donde G es alguna función continua.
+
+\subsubsection{Ejemplo}
+
+\begin{equation}
+y'  = \left( \frac{y}{x} \right)^2 e^{\frac{y}{x}}, \ \ Tiene \ forma \  y' = G \left( \frac{y}{x} \right)
+\end{equation}
+
+\subsubsection{Ejemplo}
+
+La E.D $y' =ln (y+x) - ln(x) $ es homogénea ?
+Por propiedad de logaritmos podemos escribir
+
+\begin{eqnarray}
+ \nonumber y' = ln \left( \frac{y+x}{x} \right) \\
+ \nonumber y' = ln \left( \frac{y}{x} + 1 \right)\\
+\end{eqnarray}
+
+\subsubsection{Ejemplo}
+Compruebe que $\left( x^2 - y^2 \right)dx+\left(xy+y^2\right)dy = 0$ es homogénea-
+
+
+Normalizamos 
+
+
+\begin{equation}
+\frac{dy}{dx} = \frac{y^2-x^2}{xy+y^2} \  , \ y' = frac{y^2-^2}{xy+y^2} \ , \ \ xy+y^2 = 0
+\end{equation}
+
+Dividimos entre $x^2$  $y' = \frac{\left(\frac{y}{x} \right)^2 - \left( \frac{x}{x} \right)^2 }{\frac{xy}{x^2} + \left( \frac{y}{x} \right)^2} = \frac{\left( \frac{y}{x} \right)^2 -1}{\frac{y}{x}+ \left( \frac{y}{x} \right)^2}$
+
+\subsubsection{Teorema: (Tres formas para probar homogeniedad)}
+
+\begin{enumerate}
+\item $y' = G \left( \frac{y}{x} \right)$
+\item $ F \left( \alpha x ,\alpha y \right) = F \left( x,y \right), \ $ Para todo $\alpha$ tal que $\left( \alpha x, \alpha y \right)$ pertenezca al dominio de F
+\item $ \underbrace{F (x,y)}_{y'} = H \left( \frac{x}{y} \right) $ 
+\end{enumerate}
+
+Usando el ejemplo anterior : (1)
+
+\begin{eqnarray}
+\nonumber F \left( \alpha x ,\alpha y \right) = \frac{(\alpha y)^2-(\alpha x)^2}{\alpha x \alpha y+ (\alpha y)^2} = \frac{\alpha \left( y^2-x^2 \right)}{\alpha \left( xy+y^2 \right)} = \frac{y^2-x^2}{xy+y^2} = F(x,y) \\
+\nonumber F(x,y) = H \left( \frac{x}{y} \right) \\
+\nonumber \frac{dy}{dx} = \frac{\left(\frac{y}{y} \right)^2 - \left( \frac{x}{y} \right)^2 }{\frac{xy}{y^2} - \left( \frac{y}{y} \right)^2} =  \frac{\left( 1 \right)^2 - \left( \frac{x}{y} \right)^2 }{\frac{x}{y} + \left( 1 \right)}  \\
+\end{eqnarray}
+
+\subsection{Como Resolver una E.D Homogénea}
+
+\subsubsection{Ejemplo}
+\begin{equation}
+\left(4xy +y \right) \frac{dy}{dx} = y-2x, \ y \neq -4x
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} = \frac{y-2x}{4x + y} \rightarrow Normalizamos \\
+\nonumber \frac{dy}{dx} = \frac{\frac{y}{x}-\frac{2x}{x}}{\frac{4x}{x} + \frac{y}{x}} = \frac{\frac{y}{x}-2}{4 + \frac{y}{x}}  = G \left(\frac{y}{x} \right)  \\
+\nonumber \frac{dy}{dx} = \frac{\alpha (y-2)} {4 (\alpha x) + (\alpha y)} = \frac{ \alpha (y-2x) }{\alpha (4x + y)} = F( \alpha x, \alpha y)  \\
+\nonumber \frac{dy}{dx} = \frac{\frac{y}{y}-\frac{2x}{y}}{\frac{4x}{y}+ \frac{y}{y}} = \frac{1-2\left( \frac{x}{y} \right)}{4 \left( \frac{x}{y} \right) +1}  = H \left( \frac{x}{y} \right)\\
+\end{eqnarray}
+
+Vamos a utilizar un cambio de variable $v = \frac{y}{x}$
+
+\begin{eqnarray}
+\nonumber y = vx
+\nonumber  \underbrace{y'= v + xv'}_{Utilizamos \ esta \ informacion \ para \  sustituir \ en \ la \ ED \ original \ vamos \ a \ sustituir \ y,y'} 
+\end{eqnarray}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} = \frac{\frac{y}{x} - 2}{4+ \frac{y}{x}} ,  y' = \frac{\frac{y}{x}-2}{4+ \frac{y}{x}} \\
+\nonumber \underbrace{v + xv'}_{y'} = \frac{v - 2}{ 4 + v} \\
+\end{eqnarray}
+
+Obtenemos una ecuación de Diferencial de variables separables.
+
+\begin{eqnarray}
+\nonumber xv' = \frac{v-2}{4+v} -v \\
+\nonumber x \frac{dv}{dx} = \frac{v-2-v \left( 4+ v \right) }{ 4 + v} = \frac{-v^2 -3v -2}{4+v} \\
+\nonumber x \frac{dv}{dx} = \frac{- \left( v^2 + 3v + 2 \right)}{4+v}  \\
+\nonumber \downarrow \ separamos \ variables \\
+\nonumber \int \overbrace{ \frac{v + 4}{\left( v + 1  \right) \left( v + 2 \right) } }_{fracciones parcilaes}  dv = -ln \left( x \right) + A \\
+\nonumber \frac{v + 4}{\left( v + 1  \right) \left( v + 2 \right) } = \frac{A}{\left( v + 1  \right)} +  \frac{B}{\left( v + 2 \right) } \\
+\nonumber v+4 = A (v+2) + B (v+1) \\
+si  \ v = -2  & 				& si \ v = -1 \\
+2 = 0 + B(-1) &				& 3 = A(1) \\
+\rightarrow B = -2 &			& \rightarrow A = 3
+\end{eqnarray}
+
+
+Entonces
+
+\begin{eqnarray}
+\nonumber \int \left( \frac{3}{v+1} - \frac{2}{v+2} \right) dv = -ln |x| + A \\
+\nonumber 3 \int \frac{1}{v+1} dv - 2 \int \frac{1}{v+2} dv  = -ln |x| + A \\
+\end{eqnarray}
+
+Ambas integrales se pueden resolver mediante una sustitución simple|
+
+\begin{eqnarray}
+\nonumber u = v + 1 \ du =dv &			& w = v+2 \ dw=dv \\
+\nonumber 3 \int \frac{du}{u} - 2 \int \frac{dw}{w} = -ln |x| + A \\
+\nonumber 3 ln|u| - 2ln |w| = -ln|x| + A \\
+\nonumber 3 ln |v+1| - 2 ln |v +2 | =  -ln|x| + A \\
+\nonumber ln | \frac{(v+1)^3}{(v+2)^2} | = ln|x^{-1}| + ln |C|, \ \ A =ln |C|, \ c>0 \\
+\end{eqnarray}
+
+\begin{eqnarray}
+\nonumber \frac{(v+1)^3}{(v+2)^2} = \frac{A}{|x|} \\
+\nonumber |x| | v +1 |^3 = A (v+2)^2 \\ 
+\nonumber x (v+1)^3 = B (v+2) ^2 , \ \ \ B = \pm A \\
+\nonumber x \left( \frac{y}{x} +1 \right)^3 = B \left( \frac{y}{x} + 2 \right)^2 \\
+\nonumber x \left( \frac{y+x}{x} \right)^3 = B \left(\frac{y+2x}{x} \right)^2 \\
+\nonumber \frac{y}{x^2} \left( y+x \right)^3 = \frac{B}{x^2} \left( y + 2x \right)^2 \\
+\nonumber \rightarrow \left( y + x \right)^3 = B \left( y + 2x \right)^2
+\end{eqnarray}
+
+\textbf{Ejemplo}
+
+\begin{eqnarray}
+\nonumber \left( xsen \left(\frac{y}{x} \right) - y cos \left(\frac{y}{x} \right) \right)dx + x cos \left( \frac{y}{x} \right) dy = 0 \  E.D Homogenea \\
+\nonumber v = \frac{y}{x} &		& y = \sqrt{x} \\
+\nonumber &	& y'= v + xv'\\
+\nonumber \frac{dy}{dx} = \frac{y cos \left( \frac{y}{x} \right) - x sin \left(\frac{y}{x}\right)}{x cos \frac{y}{x}} \\
+\nonumber v + xv' = \frac{vx \cos v - x \sin v}{x \cos v} \\
+\nonumber v + xv' = v - \tan v \\
+\nonumber x \frac{dv}{dx} =  - \tan v \\
+\nonumber \frac{dv}{\tan v} = - \frac{dx}{x} \\
+\nonumber \int \frac{dv}{\tan v} = -ln |x| + c_1 \\
+\nonumber ln |u| = -ln |x| + c , \ \ \ C = ln|A|, \  A>0 \\
+\nonumber e^{ln| sen v | } = e^{-ln|x| + ln |A|} \\
+\nonumber sen v = \frac{A}{x} \\
+\nonumber \rightarrow sen \left( \frac{y}{x} \right) = \frac{A}{x} \\
+\end{eqnarray}
+
+\begin{enumerate}
+\item $\left( x -y \right)dx  + xdy = 0 $
+\item $x^2 \left( sen \left( \frac{y}{x} \right) -2y^2 \cos \left( \frac{y^2}{x^2} \right) \right) dx + 2xy \cos \left( \frac{y^2}{x^2} \right) dy = 0 $ 
+\item $ \left(  x^2 -3y^2 \right) dx + 2 xy dy = 0 $
+\item $ \left( xe^{\frac{y}{x} - y} \right)dx + xdy = 0 $
+\item $ \left( x^2 -xy + y^2 \right) dx  - xy dy = 0,  y(1) = 0  $
+\item $ \left( 9x^2 + 3y^2 \right)dx - 2xy dy = 0 $ 
+\end{enumerate}
+
+\subsection{ED de orden dos y variable ausente}
+
+\subsubsection{Definicion}
+
+Una ED de orden dos con incógnita y(x) es de variable ausente si en ella no aparecen x o y . \\
+
+Con  x ausente,  $\underbrace{E \left( x,y',y'' \right)}_{orden dos} = 0 $
+
+\subsubsection{ Por ejemplo}
+
+\begin{enumerate}
+\item $ \underbrace{xy'' + 2y' = 0}_{E \left( x, y' ,y'' \right) },  \ x \neq 0 \leftarrow y \  ausente $ 
+\item $ \underbrace{2yy'' - 1 = (y')^2}_{E \left( y, y', y'' \right) } \leftarrow x \ ausente $
+\item $ \underbrace{2y'' - (y')^2 +1 = 0}_{E \left( y' , y'' \right)} \leftarrow \ x,y \ ausente$
+\end{enumerate}
+
+
+
+* Vamos a hacer un cambio de variable 
+
+\begin{equation}
+\centering
+\nonumber y' = v \ \  y'' =v'
+\end{equation}
+
+Esto lo utilizamos para reducir el orden, es decir, convertir la ED de segundo orden  (z'') a una de primer orden (z')
+
+
+* Cuando x es ausente puede pasar que estén  x,y,v en la E.D y necesitariamos eliminar una variable.
+Por lo tanto podemos utilizar la siguiente relación :
+
+\begin{equation}
+v' = \frac{dv}{x} = \frac{dv}{dy} \cdot \underbrace{ \frac{dy}{dx} }_{v} \label{eq:x_ausente}
+\end{equation}
+
+*  \ref{eq:x_ausente} importante cuando x es ausente
+
+
+\subsection{Ejemplo}
+
+\begin{eqnarray}
+\nonumber xy'' + 2y' = 0 , \ x \neq 0 \ \leftarrow y \ ausente\\
+\nonumber y' = v &	& y'' = v' \\
+\nonumber xv' +2v = 0 \leftarrow \  se \ convierte \ en \ una \ ED \ Homogenea \ de \ primer \ orden \ y \ variables \ separables \\
+\nonumber x \frac{dv}{dx} + 2v = 0 \\
+\nonumber \frac{dv}{v} = -2 \frac{dx}{x} \\
+\nonumber \int \frac{dv}{v} = -2 \int \frac{dx}{x} \\
+\nonumber ln |v| = -2 ln|x| + ln |A| \\ 
+\nonumber e^{ln |v|} = e^{ln x^{-2} + e^{ln |A|}} \\
+\nonumber |v| = Ax^{-2} , \ B = ln (A) \\
+\nonumber \rightarrow v = \frac{B}{x^2}
+\end{eqnarray}
+
+Todavía necesitamos sustituir v = y'
+
+
+\begin{eqnarray}
+\nonumber y' = \frac{B}{x^2} \rightarrow \ podemos \ integrar.
+\nonumber \int y'= B \int x^{-2} dx \\
+\nonumber y = \frac{-B}{x} + D \leftarrow Solucion \ general \\ 
+\end{eqnarray}
+
+\subsection{Ejemplo clase}
+
+\begin{equation}
+2yy''= 1+ \left( y' \right)^2 ,  \ y(2) = 1, \  y' (2) = -1, \ y(x) > \frac{1}{2}, \forall x<3  \label{eq:ejemplo_clase}
+\end{equation}
+
+En el caso de \eqref{eq:ejemplo_clase} x es ausente, vamos usar la relación  $\frac{dv}{dx} = \frac{dv}{dy} \cdot \frac{dy}{dx}$, $v = y', \ v' = y''$ .
+
+\begin{eqnarray}
+\nonumber \underbrace{2yv' = 1 + v^2 }_{problema} \rightarrow \ 2y \frac{dv}{dx} = 1+v^2\\
+\nonumber 2yv \frac{dv}{dy} = 1+v^2 \\
+\nonumber \downarrow separamos \ y \ resolvemos\\
+\nonumber \frac{2v}{1+v^2} dv = \frac{dy}{y} \\
+\nonumber \int \frac{2v}{1+v^2} dv = ln |y| \\
+\nonumber u =1+v^2 \\
+\nonumber du = 2vdv \\
+\nonumber \int \frac{du}{u} = ln|y| + ln|B| \\
+\nonumber ln|u| = ln|y| + ln|B| \\
+\nonumber e^{ln|u|} = e^{ln|y|} \cdot e^{ln|B|} \\
+\nonumber |1 + v^2| = B |y| \\
+\nonumber 1+v^2 = \pm B |y| \\
+\nonumber 1+v^2 = Cy , \ C = \pm B \\
+\nonumber 1+ (y')^2 = Cy \\
+\nonumber (y')^2 = Cy -1 , \ Aplicando \ condiciones \ iniciales \ y(2)=1 \  y'(2) = -1 \\
+\nonumber (-1)^2 = C(1)-1 \\
+\nonumber 1+1 = c \\
+\nonumber \rightarrow c =2 \\
+\nonumber (y')^2 = 2y-1 \\
+\nonumber \sqrt{(y')} = \sqrt{2y-1}\\
+\nonumber y' = \pm \sqrt{2y-1}
+\end{eqnarray}
+
+Dado que la condición y'(2) = -1, tiene signo negativo, tomamos $y' = -\sqrt{2y-1}$
+
+\begin{eqnarray}
+\nonumber \frac{dy}{dx} = - \sqrt{2y-1}\\
+\nonumber \underbrace{\int \frac{dy}{\sqrt{2y-1}} }_{sustitucion simple}  = - \int dx \\
+\nonumber \sqrt{2y-1} = -x + C \rightarrow Solucion \ general \\ 
+\end{eqnarray}
+
+usamos $y(2) = 1 $ 
+
+\begin{eqnarray}
+\nonumber \sqrt{2(1)-1} = -2 + C \\
+\nonumber 1 = -2 + C \\
+\nonumber C = 3 \\
+\nonumber \sqrt{2y-1} = -x + 3 \rightarrow \ solucion \ particular
+\end{eqnarray}
+%\begin{eqnarray}
+%\nonumber \frac{dy}{dx} = \frac{y-2x}{4x + y} \rightarrow Normalizamos \\
+%\nonumber \frac{dy}{dx} = \frac{\frac{y}{x}-\frac{2x}{x}}{\frac{4x}{x} + \frac{y}{x}} = \frac{\frac{y}{x}-2}{4 + \frac{y}{x}}  = G \left(\frac{y}{x} \right)  \\
+%\nonumber \frac{dy}{dx} = \alpha y-2 \alpha x}{4 (\alpha x) + (\alpha y)} = \frac{dy}{dx} = \frac{ \alpha (y-2x) }{\alpha (4x + y)} = \frac{dy}{dx} = \frac{y-2x}{4x + y}  \\  
+%\end{eqnarray}
+
+\end{document}
