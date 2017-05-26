@@ -1,12 +1,16 @@
+import matplotlib.pyplot as plt
+
 class network:
 	def __init__(self,num_node):
 		self.list_nodes = []
 		self.actual_node = 0
 		for i in range (num_node):
-			new_node = node() 
-			self.add(new_node)
+			self.add(node())
 
 #		set_iterator (self)
+
+
+#Graficar RED
 
 #Reinicia el nodo actual
 	def set_iterator (self):
@@ -30,10 +34,10 @@ class network:
 
 #Va al siguiente nodo (No necesariamente esta conectado)
 	def go_next (self):
-		if (actual_node +1 >= self.list_nodes.len() ):
-			actual_node = 0
+		if (self.actual_node +1 >= len(self.list_nodes) ):
+			self.actual_node = 0
 		else:
-			actual_node = actual_node +1
+			self.actual_node = self.actual_node +1
 
 #Retorna el dato actual
 #	def return_data (self)
@@ -61,29 +65,32 @@ class network:
 
 #Encontrar un elemento en la red
 	def find (self, data):
-		found = False
-		for i in self:
+		# Variable utilizada para saber si encontre el dato que buscaba
+		found = False	
+		nodelio = self.list_nodes[0]		
+		for i in range (len(self.list_nodes)):
 			print "Estoy en el nodo " +str(i)
-			if (data == self.list_node[i].data):
-				nodelio = i
+			if (data == self.list_nodes[i].data[0]):
+				nodelio = self.list_nodes[i]
 				break
-			vecindario = self.list_node[i].len(neighbors)
-			for j in vecindario :
+			vecindario = len(self.list_nodes[i].neighbors)
+			for j in range(vecindario) :
 				print "Estoy en el nodo " +str(j)
-				if(data == self.list_node[j].data):
+				if(data == self.list_nodes[j].data[0]):
 					found = True
-					nodelio = j
+					nodelio = self.list_nodes[j]
 					break
 
-			if (found == True):
-				
-				break
+		if (found == True):
+			print "Lo encontre"
+	
+
 		return nodelio
 			
 						
 class node:
-	def _init_(self,data):
-		self.data = [data]
+	def __init__(self):
+		self.data = []
 		self.neighbors= []
 
 #if __name__ == "__main__":
