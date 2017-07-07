@@ -22,5 +22,5 @@ if __name__ == "__main__":
 	red_1= generate(n_nodes,n_edges)
 
 	nx.draw(red_1)
-	red_1.draw_networkx_labels()
+	#red_1.draw()
 	plt.show()

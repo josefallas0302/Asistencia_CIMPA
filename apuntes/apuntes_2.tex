@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+
+\begin{document}
+	\subsection{Definicion}
+	E.D lineal en y ($frac{dy}{dx}$),   $a(x)y'+ b(x)y = c(x)$. \\
+	E.D lineal en x ($frac{dx}{dy}$ cambio de x con respecto a y),	$a(y)x'+ b(y)x'= c(y)$. \\
+
+Para resolver E.D lineal necesitamos encontrar un factor integrante	
+
+	\subsection{Teorema (Cálculo de factor integrante)}
+
+		La E.D lineal y'+p(x)y  = q(x) tiene al menos un factor integrante de forma u = e^{\int p(x)dx}
+
+	\subsection(Demostración)
+
+	\begin{equation}
+		uy'+ up(x)y = \underbrace{u}_{factor integrante}q(x)
+		\label{eq:factor_integrante}
+	\end{equation}
+
+Queremos escribirlo de la siguiente forma $(u \cdot y )' = u \cdot g()x \ = \ uy' + yu' = uq(x) $, si comparamos la ecuación anterior con \refeq{eq:factor_integrante}, solo necesitamos que $u' = up(x)$ . 
+
+Suponemos que $u = u(x) \neq =0$ y tenemos lo siguiente:
+
+\begin{eqnarray}
+\nonumber u' = up(x) \\
+\nonumber \frac{du}{dx} = up(x) \\
+\nonumber \frac{du}{u} = p(x) \\
+\nonumber ln|u| = \int  p(x) dx + C
+\end{eqnarray}
+
+Como solo se requiere un factor integrante, entonces c = 0.
+
+\begin{eqnarray}
+\nonumber e^{ln|u|} = e^{\int p(x) dx}\\
+\nonumber u = \np e^{\int p(x)dx}\\
+\nonumber \underbracce{u = e^{\int p(x) d(x)}_{Factor integrante} }
+\end{eqnarray}
+
+
+  
+
+
+\end{document}
+
+
+
+
+\begin{equation}
+sen\left( x \right) dx + ydy = 0, \ \ \ \ \ con \ \  y \left(0 \right) = 0 \\
+\end{equation}
+
+\begin{eqnarray}
+\nonumber -sen\left( x \right) dx &=& ydy \leftarrow separamos variables \\
+\nonumber - \int sen\left( x \right) dx &=& \int ydy \leftarrow integramos \\
+\nonumber cos \left( x \right) &=& \frac{y^2}{2} + c \ \ , \ \ \ \ \ c constante arbitraria \\
+\nonumber y^2 &=& 2cos \left( x \right) + 2c \ \ \ \ \ \ \ A = 2C \\
+\nonumber y &=&  \sqrt[•]{2cos \left( x \right) + A} \\
+\nonumber Con y \left( 0 \right) = 1 \\
+\nonumber  \Rightarrow 1 &=& \sqrt{2cos \left( x \right) + A} \Rightarrow 1^2 = \left( \sqrt{2cos \left( x \right) + A}\right)^2 \\
+\nonumber 1 &=& 2 + A \Rightarrow A =-1 \\
+\nonumber \Rightarrow  y &=& \sqrt{2cos\left(x \right) -1}
+\end{eqnarray}
+
+
+\subsubsection{Ejemplo}
+
+\begin{equation}
+y'  = \left( \frac{y}{x} \right)^2 e^{\frac{y}{x}}, \ \ Tiene \ forma \  y' = G \left( \frac{y}{x} \right)
+\end{equation}
+
+\subsubsection{Ejemplo}
+
+La E.D $y' =ln (y+x) - ln(x) $ es homogénea ?
+Por propiedad de logaritmos podemos escribir
+
+\begin{eqnarray}
+ \nonumber y' = ln \left( \frac{y+x}{x} \right) \\
+ \nonumber y' = ln \left( \frac{y}{x} + 1 \right)\\
+\end{eqnarray}
+
+\subsubsection{Ejemplo}
+Compruebe que $\left( x^2 - y^2 \right)dx+\left(xy+y^2\right)dy = 0$ es homogénea-
+
+
+
+\begin{equation}
+x \frac{dy}{dx} = 2 \left(y-4 \right) \ \ \ \ \ \ \ (Ver la Familia de Soluciones)
+\end{equation}
+
+\begin{eqnarray}
+\nonumber \frac{dy}{2\left(2t-4 \right)} &=& \frac{dx}{x}  \\
+\nonumber u = y-4 \ \ \ \ du = dy  & & \\
+\nonumber \frac{1}{2} \int \frac{du}{u} &=& ln \lvert x \rvert + A\\
+\nonumber \frac{1}{2} ln \lvert u \rvert &=& ln \lvert x \rvert + A \\
+\nonumber ln{\lvert y-4 \rvert }^{\frac{1}{2}} &=& ln \lvert x \rvert +A \\
+\nonumber e^{ln{\lvert y-4 \rvert }^{\frac{1}{2}}} &=& e^{ ln \lvert x \rvert + A } \\
+\nonumber {lvert y-4 \rvert}^{\frac{1}{2}}  &=& \lvert x \rvert \cdot e^A \\
+\nonumber \sqrt{y-4} &=& x \cdot B, \ \ \ \ \ B =  e^A  \\
+\nonumber {\sqrt{y-4}}^2 &=& Bx^2 \\
+\nonumber y-4 &=& Bx^2 \\ 
+\nonumber  & \underbrace{y = Bx^2 + 4}_{Solucion \ General} & \rbrace Solucion \ General \\
+\end{eqnarray}
+
+
+
+usamos $y(2) = 1 $ 
+
+\begin{eqnarray}
+\nonumber \sqrt{2(1)-1} = -2 + C \\
+\nonumber 1 = -2 + C \\
+\nonumber C = 3 \\
+\nonumber \sqrt{2y-1} = -x + 3 \rightarrow \ solucion \ particular
+\end{eqnarray}
+
+\begin{eqnarray}
+\nonumber \int \left( \frac{3}{v+1} - \frac{2}{v+2} \right) dv = -ln |x| + A \\
+\nonumber 3 \int \frac{1}{v+1} dv - 2 \int \frac{1}{v+2} dv  = -ln |x| + A \\
+\end{eqnarray}
+
+Ambas integrales se pueden resolver mediante una sustitución simple|
+
+\begin{eqnarray}
+\nonumber u = v + 1 \ du =dv &			& w = v+2 \ dw=dv \\
+\nonumber 3 \int \frac{du}{u} - 2 \int \frac{dw}{w} = -ln |x| + A \\
+\nonumber 3 ln|u| - 2ln |w| = -ln|x| + A \\
+\nonumber 3 ln |v+1| - 2 ln |v +2 | =  -ln|x| + A \\
+\nonumber ln | \frac{(v+1)^3}{(v+2)^2} | = ln|x^{-1}| + ln |C|, \ \ A =ln |C|, \ c>0 \\
+\end{eqnarray}
+
+\begin{eqnarray}
+\nonumber \frac{(v+1)^3}{(v+2)^2} = \frac{A}{|x|} \\
+\nonumber |x| | v +1 |^3 = A (v+2)^2 \\ 
+\nonumber x (v+1)^3 = B (v+2) ^2 , \ \ \ B = \pm A \\
+\nonumber x \left( \frac{y}{x} +1 \right)^3 = B \left( \frac{y}{x} + 2 \right)^2 \\
+\nonumber x \left( \frac{y+x}{x} \right)^3 = B \left(\frac{y+2x}{x} \right)^2 \\
+\nonumber \frac{y}{x^2} \left( y+x \right)^3 = \frac{B}{x^2} \left( y + 2x \right)^2 \\
+\nonumber \rightarrow \left( y + x \right)^3 = B \left( y + 2x \right)^2
+\end{eqnarray}
+
+
