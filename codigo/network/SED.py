@@ -1,36 +1,28 @@
-"""
-	En este módulo se define el sistema de ecuaciones diferenciales
-	de la dinámica de la población dentro de una comunidad.
-"""
+#	En este modulo se define el sistema de ecuaciones diferenciales
+#	de la dinamica de la poblacion dentro de una comunidad.
 
-	def vectorfield(w,t,p)
 
-"""
-Define la ecuacion diferencial para la dinamica poblacional
+def vectorfield (w,t,p):
 
-Se definen 3 vectores:
-	- w: Vector de variables de Estado
-			[s, i, e]
 
-	- t: tiempo
+#Define la ecuacion diferencial para la dinamica poblacional
 
-	- p: Parametros
-			[u, b, g]
-"""	
+#Se definen 3 vectores:
+#	- w: Vector de variables de Estado
+#			[s, i, e]
+#	- t: tiempo
+#	- p: Parametros	[u, b, g]	
 
-		s, i, e = w
-		u, b, g = p
-		n = s+i+e
+	Ys,Xs,Yi,Xi,Yr,Xr = w
+	u, b, g = p
+	n = Xs+Xi+Xr
 
-# Create f = (s’,i’,r’):
+# Create f = (s_prima,s(t),i_prima,i(t),r_prima,r(t)):
 
-		f = [s,
-			 u * n - b*s*i/n - u*s ,
-			 i,
-			 (b * s * i/n - (u+g) * i,
-			 r,
-			 g * i- u * n
-			]
+	f = [Ys,
+	u*n - (b*Xs*Xi)/n - u*Xs,
+	Yi,
+	(b*Xs*Xi)/n - (u+g) * Xi,
+	Yr,
+	g * Xi - u * n]
 	return f
-	
-	
