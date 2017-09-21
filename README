@@ -4,7 +4,9 @@ la segunda es crear un programa para la simulación de una enfermedad en una pob
 
 Tarea_1:
 
-Esta tarea se encuentran en la carpeta de apuntes
+Esta tarea se encuentran en la carpeta de apuntes, en ella se encuentra la carpeta notas_mano en donde se encuentra un pdf con 
+los apuntes del profesor a mano, para ejecutar ambos reportes debe escribir en consola "make" , esto generará los 2 pdf y para 
+borrarlos ejecute "makeclean" en consola, esto borrará todos los archivos basura y mantendrá los archivos .tex
 
 Tarea_2:
 
