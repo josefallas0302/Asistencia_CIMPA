@@ -1,0 +1,17 @@
+# Asistencia_CIMPA
+En este repositorio se asignaron dos tareas, la primera es pasar apuntes que se encuentran a mano a latex, 
+la segunda es crear un programa para la simulación de una enfermedad en una población.
+
+Tarea_1:
+
+Esta tarea se encuentran en la carpeta de apuntes
+
+Tarea_2:
+
+En SED.py se encuentra el sistema de ecuaciones diferenciales
+
+En la carpeta código se encuentran los archivos necesarios para ejecutar solver_population_SED.py el cual resuelve el sistema
+de ecuaciones genera un archivo de texto con  el tiempo  y la cantidad de personas (Sanas,Enfermas,Recuperadas).
+
+El archivo clases.py es una clase para manejar la dinámica de poblaciones, es decir para crear una comunidad
+de "n" personas y poder enviar a estar personas de una comunidad A a B.
