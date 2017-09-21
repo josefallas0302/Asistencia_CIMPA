@@ -11,7 +11,15 @@
 %      Ejercicio 1        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{document}
+
+\section{Variables Separables}
+
+\subsection{Ejercicio 1}
+
+
+
 \begin{equation}
 2xy + 6x + \left(x^2-4 \right) y' \\
 \end{equation}
@@ -28,24 +36,30 @@
 \nonumber  \int \frac{dy}{y+3}  &=& \int \frac{-2x}{x^2-4} dx
 \end{eqnarray}
 
+
+
 \begin{align*}
 U &= y + 3	&	 &w = x^2-4 \\
 du &= dy 	 &	 &dw = 2xdx
 \end{align*}
 
+
 \begin{eqnarray}
-\nonumber \int \frac{du}{U} &=& \int \frac{dw}{w} \\
-\nonumber ln \lvert u \rvert &=& -ln \lvert w \rvert +C \\
-\nonumber ln \lvert y+3 \rvert &=& -ln \lvert x^2-4 \rvert +C \\
-\nonumber e^{ln\lvert y+3 \rvert} &=& e^{ln\lvert x^2-4 \rvert ^-1} \cdot e^c \\
+\nonumber \int \frac{du}{U}  &=&  \int \frac{dw}{w} \\
+\nonumber ln \lvert u \rvert  &=&  -ln \lvert w \rvert +C \\
+\nonumber ln \lvert y+3 \rvert  &=&  -ln \lvert x^2-4 \rvert +C \\
+\nonumber e^{ln\lvert y+3 \rvert}  &=&  e^{ln\lvert x^2-4 \rvert ^-1} \cdot e^c \\
 \nonumber y+3 &=& \frac{A}{x^2-4}  \ \ \ \ \     , A = \pm e^c \\
 \nonumber y+3 &=& \frac{A}{x^2 -4} \rightarrow Solucion General
 \end{eqnarray}
 \\
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Ejercicio 2        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Ejercicio 2}
 
 \begin{equation}
 sen\left( x \right) dx + ydy = 0, \ \ \ \ \ con \ \  y \left(0 \right) = 0 \\
@@ -66,6 +80,7 @@ sen\left( x \right) dx + ydy = 0, \ \ \ \ \ con \ \  y \left(0 \right) = 0 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Ejercicio 3        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ejercicio 3}
 
 \begin{equation}
 \frac{dy}{dx} = xe^{x^2 -ln\left( y^2 \right)}
@@ -86,6 +101,7 @@ sen\left( x \right) dx + ydy = 0, \ \ \ \ \ con \ \  y \left(0 \right) = 0 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Ejercicio 4        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ejercicio 4}
 
 \begin{equation}
 x \frac{dy}{dx} = 2 \left(y-4 \right) \ \ \ \ \ \ \ (Ver la Familia de Soluciones)
@@ -108,6 +124,7 @@ x \frac{dy}{dx} = 2 \left(y-4 \right) \ \ \ \ \ \ \ (Ver la Familia de Solucione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %      Ejercicio 5        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ejercicio 5}
 
 \begin{equation}
 \frac{dy}{dx} = \frac{x^2 y -4y}{x+2}
@@ -139,11 +156,16 @@ x \frac{dy}{dx} = 2 \left(y-4 \right) \ \ \ \ \ \ \ (Ver la Familia de Solucione
 \nonumber y &=& -ln \left( -e^x + A \right)  
 \end{eqnarray}
 
-Ejemplo 
+\section{Sustituciones}
+
+\subsection{Ejemplo}
 
 \begin{equation}
 \left( x^2 + 4 \right) dy  - xydx  = 0, \ \ \ \ \ \ \ Trabajo \  en \ clase
 \end{equation}
+
+
+\begin{center}
 
 \begin{eqnarray}
 \nonumber \left( x^2 + 4 \right) dy  &=& xydx \\
@@ -152,15 +174,17 @@ Ejemplo
 \nonumber ln \lvert y \rvert &=& \frac{1}{2} ln \lvert x^2 + 4 \rvert  + C ,  \ \ \ e^C = B \\
 \nonumber y &=& \sqrt{x^2 + 4} \cdot B \rightarrow Solucion \ general, \ \  Solucion \  singular y\left( x \right) = 0 \\ 
 \end{eqnarray}
-\underline{Ejemplo}
+\end{center}
+
+\subsection{Ejemplo}
 
 \begin{equation}
 \frac{dy}{dx} = 2y +1 
 \end{equation}
 
 \begin{eqnarray}
-\nonumber \frac{dy}{2y +1} = dx \leftarrow Separamos \ para \  2y +1 \neq 0 \\
-\nonumber \int \frac{dy}{2y+1} = \int dx \\ 
+\nonumber \frac{dy}{2y +1} &=& dx \leftarrow Separamos \ para \  2y +1 \neq 0 \\
+\nonumber \int \frac{dy}{2y+1} &=& \int dx \\ 
 \nonumber u = 2y+1 \ \ \ du =2dy & & \\
 \nonumber \frac{1}{2} \int \frac{du}{u} &=& x + C \\
 \nonumber ln \rvert u \lvert &=& 2x + 2C , \ \ \ \ B = 2C \\
@@ -169,7 +193,8 @@ Ejemplo
 \nonumber \Leftarrow y &=& \frac{De^{2x}-1}{2}
 \end{eqnarray}
 
-\underline{Ejerciocios} \ \ \ \ \  (Separables) \\
+\subsection{Ejercicios Var. Separables}
+
 
 Resuelva : 
 
@@ -183,9 +208,9 @@ Resuelva :
 \item Demuestre que $ y = \frac{cos(x)}{x}$ es la solución de la E.D $x \frac{dy}{dx} + y=-sin(x), \ x > 0,\  con \ y\left(\frac{\pi}{2} \right) = 0  $
 \end{enumerate}
 
-\subsection{E.D Homogéneas}
+\section{E.D Homogéneas}
 
-\subsubsection{Def:}
+\subsection{Def:}
 
 Una E.D normalizada $y' = F(x,y)$ es homogénea si puede escribirse como: \\
 
@@ -195,13 +220,13 @@ Una E.D normalizada $y' = F(x,y)$ es homogénea si puede escribirse como: \\
 
 Donde G es alguna función continua.
 
-\subsubsection{Ejemplo}
+\subsection{Ejemplo}
 
 \begin{equation}
 y'  = \left( \frac{y}{x} \right)^2 e^{\frac{y}{x}}, \ \ Tiene \ forma \  y' = G \left( \frac{y}{x} \right)
 \end{equation}
 
-\subsubsection{Ejemplo}
+\subsection{Ejemplo}
 
 La E.D $y' =ln (y+x) - ln(x) $ es homogénea ?
 Por propiedad de logaritmos podemos escribir
@@ -211,7 +236,7 @@ Por propiedad de logaritmos podemos escribir
  \nonumber y' = ln \left( \frac{y}{x} + 1 \right)\\
 \end{eqnarray}
 
-\subsubsection{Ejemplo}
+\subsection{Ejemplo}
 Compruebe que $\left( x^2 - y^2 \right)dx+\left(xy+y^2\right)dy = 0$ es homogénea-
 
 
@@ -224,7 +249,7 @@ Normalizamos
 
 Dividimos entre $x^2$  $y' = \frac{\left(\frac{y}{x} \right)^2 - \left( \frac{x}{x} \right)^2 }{\frac{xy}{x^2} + \left( \frac{y}{x} \right)^2} = \frac{\left( \frac{y}{x} \right)^2 -1}{\frac{y}{x}+ \left( \frac{y}{x} \right)^2}$
 
-\subsubsection{Teorema: (Tres formas para probar homogeniedad)}
+\subsection{Teorema: (Tres formas para probar homogeniedad)}
 
 \begin{enumerate}
 \item $y' = G \left( \frac{y}{x} \right)$
